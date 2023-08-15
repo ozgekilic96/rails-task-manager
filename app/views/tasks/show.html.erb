@@ -1,0 +1,14 @@
+ <div class="p-3 mb-2 bg-light text-dark border w-25 text-center">
+
+    <%= link_to "🔙 Back to My Tasks", tasks_path %>
+
+    <h3> <%= @task.title %> </h3>
+
+    <p> <%= @task.details %> </p>
+    <% if @task.completed %>
+    <p class="text-success">This task in completed</p>
+    <% else %>
+    <p class="text-danger">This task is not completed</p>
+    <% end %>
+
+ </div>

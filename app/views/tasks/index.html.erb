@@ -1,0 +1,9 @@
+<div class="container bg-light border w-25 text-center mt-40">
+  <h1>My Task</h1>
+  <p> <%= link_to "Add new task", new_task_path %> </p>
+  <% @tasks.each do |task| %>
+  <h3>
+  <%= link_to task.title, task_path(task.id) %>
+  </h3>
+  <% end %>
+</div>
